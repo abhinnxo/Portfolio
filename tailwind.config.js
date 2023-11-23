@@ -24,7 +24,7 @@ module.exports = {
         scaryblack: "#0D0D0D",
         terminalgreen: "#1FAA59",
         zestyorange: "#E07C24",
-        furfle: "#3E8B87",
+        furfle: "#8D3DAF",
         turtle: "#03C6C7",
       },
     },
