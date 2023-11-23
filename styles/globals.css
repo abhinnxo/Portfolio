@@ -163,6 +163,12 @@ p#project__desc {
   box-shadow: 3px 3px 20px#000;
   transition-duration: 0.5s;
 }
+#links__a {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(fit-content + 3vh);
+}
 .emboss {
   box-shadow: 5px 5px 10px #90917f, -5px -5px 10px #e2e3c7;
 }
@@ -174,4 +180,28 @@ p#project__desc {
   box-shadow: inset 5px 5px 10px #90917f, inset -5px -5px 10px #e2e3c7;
 
   transition: all 1s linear;
+}
+
+/* Styles for cursor-based devices */
+@media (hover: hover) and (pointer: fine) {
+  .hoverToOpen {
+    overflow: hidden;
+    transition: width 100s ease-in-out;
+  }
+
+  .expanded {
+    width: fit-content; /* Adjust the width as needed */
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .visible {
+    display: inline;
+  }
+}
+
+.unselectable {
+  user-select: none;
 }

@@ -18,6 +18,10 @@ const Projects = () => {
             tags={["ReactJS", "ExpressJS", "Bootstrap", "Socket.io", "Axios"]}
             width={500}
             height={500}
+            links={[
+              "https://github.com/abhinnxo/BOB-frontend",
+              "https://battleofbrains.netlify.app/",
+            ]}
           />
           <ProjectCard
             image={"/dukaan-Mockup.png"}
@@ -28,6 +32,10 @@ const Projects = () => {
             tags={["ReactJS", "Firebase Google Auth", "JSON", "Bootstrap"]}
             width={500}
             height={500}
+            links={[
+              "https://github.com/abhinnxo/thedukaandar",
+              "https://thedukaandar.netlify.app/",
+            ]}
           />
           <Link
             id="view-all-projects"

@@ -10,7 +10,7 @@ import {
 import { MdAlternateEmail } from "react-icons/md";
 const Card = ({ icon, text, link }) => {
   return (
-    <a href={link} target="_blank" className="cards">
+    <a href={link} target="_blank" id="links__a" className="cards">
       <div className="flex mx-auto min-w-[300px] w-[25%] bg-white px-8 mb-10 py-4 rounded-lg cursor-pointer">
         <div className="flex justify-start my-auto font-bold w-[100px]">
           {icon}
@@ -27,7 +27,7 @@ const index = () => {
       <h1 className="text-scaryblack text-7xl py-32 text-center font-bolder">
         Abhinn&apos;s Links
       </h1>
-      <div>
+      <div className="">
         <Card
           icon={<BsDownload style={{ fontWeight: "900" }} />}
           text={"Download Resume"}

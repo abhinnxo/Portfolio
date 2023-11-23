@@ -23,6 +23,10 @@ const ProjectsPage = () => {
             tags={["ReactJS", "ExpressJS", "Bootstrap", "Socket.io", "Axios"]}
             width={500}
             height={500}
+            links={[
+              "https://github.com/abhinnxo/BOB-frontend",
+              "https://battleofbrains.netlify.app/",
+            ]}
           />
           <ProjectCard
             image={"/dukaan-Mockup.png"}
@@ -33,6 +37,10 @@ const ProjectsPage = () => {
             tags={["ReactJS", "Firebase Google Auth", "JSON", "Bootstrap"]}
             width={500}
             height={500}
+            links={[
+              "https://github.com/abhinnxo/thedukaandar",
+              "https://thedukaandar.netlify.app/",
+            ]}
           />{" "}
           <ProjectCard
             image={"/roll-a-dice-Mockup.png"}
@@ -41,6 +49,10 @@ const ProjectsPage = () => {
             tags={["Java", "XML"]}
             width={500}
             height={0}
+            links={[
+              "https://github.com/abhinnxo/Roll-a-Dice.",
+              "https://play.google.com/store/apps/details?id=com.abhinnkrishn.honey1.mysnakes&hl=en&gl=US",
+            ]}
           />
           <ProjectCard
             image={"/chat-room-Mockup.png"}
@@ -51,6 +63,10 @@ const ProjectsPage = () => {
             tags={["ReactJS", "Firebase Google Auth", "Firestore", "Bootstrap"]}
             width={500}
             height={500}
+            links={[
+              "https://github.com/abhinnxo/chat-room.",
+              "https://react-chat-app-21.web.app/",
+            ]}
           />
           <ProjectCard
             image={"/chat-room-Mockup.png"}
@@ -61,6 +77,10 @@ const ProjectsPage = () => {
             tags={["HTML", "CSS", "APIs"]}
             width={500}
             height={500}
+            links={[
+              "https://github.com/abhinnxo/Astrominia-Chrome-Extension.",
+              "https://chromewebstore.google.com/detail/new-tab-by-astrominia/ophifjbfjhcmphoigfhmbmcbemlmbgej",
+            ]}
           />
         </div>
       </div>

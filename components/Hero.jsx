@@ -11,7 +11,7 @@ const Hero = () => {
         <h1 className="max-2xl:text-center max-sm:text-8xl font-black text-9xl mt-6">
           Abhinn Krishn.
         </h1>
-        <h2 className="max-2xl:text-center font-bold max-sm:text-4xl px-4 text-5xl opacity-30 mt-6">
+        <h2 className="max-2xl:text-center font-bold max-sm:text-4xl px-4 text-5xl opacity-50 mt-6">
           I&apos;m a Frontend Web Developer.
         </h2>
         <a

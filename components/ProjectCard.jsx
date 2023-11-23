@@ -1,14 +1,35 @@
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
-import React from "react";
 import { BsGithub, BsLink45Deg } from "react-icons/bs";
 import Tags from "./Tags";
+import Link from "next/link";
 
-const ProjectCard = ({ image, title, desc, width, height, tags }) => {
-  const mouseEnterOnProjectLink = (e) => {
-    if (e.target.children[1]) e.target.children[1].classList.remove("hidden");
+const ProjectCard = ({ image, title, desc, width, height, tags, links }) => {
+  const [isGithubHovered, setIsGithubHovered] = useState(false);
+  const [isLinkHovered, setIsLinkHovered] = useState(false);
+
+  const router = useRouter();
+
+  const handleMouseEnterGithub = () => {
+    setIsGithubHovered(true);
   };
-  const mouseLeaveOnProjectLink = (e) => {
-    if (e.target.children[1]) e.target.children[1].classList.add("hidden");
+
+  const handleMouseLeaveGithub = () => {
+    setIsGithubHovered(false);
+  };
+
+  const handleMouseEnterLink = () => {
+    setIsLinkHovered(true);
+  };
+
+  const handleMouseLeaveLink = () => {
+    setIsLinkHovered(false);
+  };
+
+  const handleClick = (url) => {
+    console.log("link Clicked");
+    window.open(url, "_blank");
   };
 
   return (
@@ -31,28 +52,42 @@ const ProjectCard = ({ image, title, desc, width, height, tags }) => {
           {tags && tags.map((tag, index) => <Tags key={index} text={tag} />)}
         </div>
         <div className="lg:absolute bottom-10 flex gap-6 mt-6">
-          <div
-            className="hoverToOpen flex gap-2 p-2 rounded-full emboss-inner cursor-pointer"
-            onClick={(e) => console.log("clicked")}
-            onMouseEnter={(e) => mouseEnterOnProjectLink(e)}
-            onMouseLeave={(e) => mouseLeaveOnProjectLink(e)}
-          >
-            <BsGithub className="text-3xl" />
-            <span className="hidden mt-1">
-              Click to open!&nbsp;&nbsp;&nbsp;
-            </span>
-          </div>
-          <div
-            className="hoverToOpen flex gap-2 p-2 rounded-full emboss-inner cursor-pointer"
-            onClick={(e) => console.log("clicked")}
-            onMouseEnter={(e) => mouseEnterOnProjectLink(e)}
-            onMouseLeave={(e) => mouseLeaveOnProjectLink(e)}
-          >
-            <BsLink45Deg className="text-3xl" />
-            <span className="hidden mt-1">
-              Click to open!&nbsp;&nbsp;&nbsp;
-            </span>
-          </div>
+          <Link href={links[0]} legacyBehavior>
+            <a target="_blank" rel="noopener noreferrer">
+              <div
+                className={`hoverToOpen flex gap-2 p-2 rounded-full emboss-inner cursor-pointer unselectable ${
+                  isGithubHovered ? "expanded" : ""
+                }`}
+                onMouseEnter={handleMouseEnterGithub}
+                onMouseLeave={handleMouseLeaveGithub}
+              >
+                <BsGithub className="text-3xl" />
+                <span
+                  className={`mt-1 ${isGithubHovered ? "visible" : "hidden"}`}
+                >
+                  Click to open!&nbsp;&nbsp;&nbsp;
+                </span>
+              </div>
+            </a>
+          </Link>
+          <Link href={links[1]} legacyBehavior>
+            <a target="_blank" rel="noopener noreferrer">
+              <div
+                className={`hoverToOpen flex gap-2 p-2 rounded-full emboss-inner cursor-pointer unselectable ${
+                  isLinkHovered ? "expanded" : ""
+                }`}
+                onMouseEnter={handleMouseEnterLink}
+                onMouseLeave={handleMouseLeaveLink}
+              >
+                <BsLink45Deg className="text-3xl" />
+                <span
+                  className={`mt-1 ${isLinkHovered ? "visible" : "hidden"}`}
+                >
+                  Click to open!&nbsp;&nbsp;&nbsp;
+                </span>
+              </div>
+            </a>
+          </Link>
         </div>
       </div>
     </div>
