@@ -69,7 +69,7 @@ const ProjectsPage = () => {
             ]}
           />
           <ProjectCard
-            image={"/chat-room-Mockup.png"}
+            image={"/astro-Mockup.png"}
             title={"Astrominia"}
             desc={
               "Every time you open a new tab in your Chrome browser, you're greeted with a fresh image and an inspiring quote sourced from NASA's API for captivating visuals a Quotes API for thought-provoking wisdom."
