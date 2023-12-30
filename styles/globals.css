@@ -205,3 +205,9 @@ p#project__desc {
 .unselectable {
   user-select: none;
 }
+
+/* Input text */
+input,
+textarea {
+  color: #0e0e0e !important;
+}
