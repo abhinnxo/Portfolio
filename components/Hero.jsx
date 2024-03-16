@@ -17,7 +17,7 @@ const Hero = () => {
         <a
           id="resume"
           className="glow-on-hover max-2xl:mx-auto w-fit px-4 py-2 mt-12 flex justify-around font-bold text-md"
-          href="/Abhinn-Krishn-Resume.pdf"
+          href="/ABHINN_KRISHN_RESUME.pdf"
           download="ABHINN_KRISHN_RESUME.pdf"
         >
           <span className="my-auto font-bold text-md">
