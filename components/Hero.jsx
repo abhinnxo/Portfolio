@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { BsDownload } from "react-icons/bs";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -16,14 +15,14 @@ const Hero = () => {
         </h2>
         <a
           id="resume"
-          className="glow-on-hover max-2xl:mx-auto w-fit px-4 py-2 mt-12 flex justify-around font-bold text-md"
-          href="/ABHINN_KRISHN_RESUME.pdf"
-          download="ABHINN_KRISHN_RESUME.pdf"
+          className="glow-on-hover max-2xl:mx-auto w-fit px-4 py-2 mt-12 flex justify-center gap-4 font-bold text-md"
+          href="https://drive.google.com/file/d/1ZgHrkyUkPNZCom5kmzMg9nf3iNdxGyxv/view?usp=drive_link"
+          target="_blank"
         >
+          <span className="mt-1.5">View Resume</span>
           <span className="my-auto font-bold text-md">
-            <BsDownload style={{ fontWeight: "900" }} />
+            <FaExternalLinkAlt style={{ fontWeight: "900" }} />
           </span>
-          <span className="mt-1.5">Download Resume</span>
         </a>
       </div>
     </div>
